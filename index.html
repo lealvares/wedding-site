@@ -35,12 +35,12 @@
             text-align: center;
             margin: 20px 0%;
             position: relative;
-            height: 400px;
+            height: auto;
             overflow: hidden;
         }
 
         .gif-container img {
-            max-width: 20%;
+            max-width: 100%; /* Ajusta à largura da tela */
             height: auto;
             position: relative;
             z-index: 10;
@@ -108,7 +108,7 @@
             transform: rotate(45deg);
             animation: fall 5s linear infinite;
             border-radius: 5px;
-            z-index: 1; /* Atrás do conteúdo principal */
+            z-index: 1;
         }
 
         .heart::before,
@@ -129,6 +129,29 @@
         .heart::after {
             left: -10px;
             top: 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .gif-container img {
+                max-width: 80%; /* Tamanho maior para telas menores */
+            }
+
+            .message {
+                max-width: 90%; /* Expandir para caber melhor */
+            }
+
+            .message h2 {
+                font-size: 1.5rem;
+            }
+
+            .message p {
+                font-size: 1rem;
+            }
         }
 
         audio {
